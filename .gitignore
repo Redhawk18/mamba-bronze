@@ -1,3 +1,7 @@
+# project additional files
+prefix.txt
+suffix.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
