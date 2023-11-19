@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import re
 
 from fontTools import ttLib
 from num2words import num2words
@@ -26,7 +27,7 @@ def json_to_rust(name: str) -> str:
             new_name += c
 
     # capitalize
-    words = new_name.split("-")
+    words = re.split(r" |-|_|#|!|\(|\)", new_name)
     for i, word in enumerate(words):
         words[i] = word.capitalize()
 
